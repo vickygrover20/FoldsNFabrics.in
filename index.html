@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoldsNFabrics | Premium Home Décor</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #e6e6e6;
+}
+
+/* FIX LINK COLORS */
+a { color: inherit; text-decoration: none; }
+a:visited { color: inherit; }
+
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #000;
+  border-bottom: 1px solid #111;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: #b30000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* ===== HERO ===== */
+header {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1616627987410-7a4c98a1c2d2') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+}
+
+.hero { position: relative; z-index: 1; }
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #b30000;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 15px auto;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* BUTTONS */
+.btn-red {
+  background: #b30000;
+  padding: 12px 25px;
+  color: white;
+}
+.btn-whatsapp {
+  background: #25D366;
+  padding: 12px 25px;
+  color: white;
+  margin-left: 10px;
+}
+
+/* ===== PRODUCTS ===== */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #b30000;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #b30000;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ===== STRIP ===== */
+.strip {
+  background: #0d0d0d;
+  text-align: center;
+  padding: 40px;
+}
+
+/* ===== CONTACT ===== */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #111;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #b30000;
+  color: white;
+  border: none;
+}
+
+/* ===== MAP ===== */
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 12px;
+  border-radius: 50px;
+  color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">FoldsNFabrics&reg;</div>
+  <div>
+    <a href="#">Home</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+  <div class="hero">
+    <h1>FoldsNFabrics&reg;</h1>
+    <p>
+      Redefining Comfort & Elegance in Every Home.<br>
+      Discover premium fabrics, timeless designs, and curated collections 
+      crafted to transform your living spaces into a statement of style.
+    </p>
+
+    <a href="catalogue.html" class="btn-red">View Collection</a>
+    <a href="https://wa.me/919034840539" class="btn-whatsapp">💬 WhatsApp</a>
+  </div>
+</header>
+
+<!-- PRODUCTS -->
+<section>
+  <h2>Our Collection</h2>
+  <div class="products">
+
+    <a href="catalogue/bedsheets.pdf" target="_blank">
+      <div class="card">
+        <img src="images/bedsheet.jpg">
+        <h3>Bedsheets</h3>
+      </div>
+    </a>
+
+    <a href="catalogue/curtains.pdf" target="_blank">
+      <div class="card">
+        <img src="images/curtains.jpg">
+        <h3>Curtains</h3>
+      </div>
+    </a>
+
+    <a href="catalogue/sofa.pdf" target="_blank">
+      <div class="card">
+        <img src="images/sofa.jpg">
+        <h3>Sofa Fabrics</h3>
+      </div>
+    </a>
+
+    <a href="catalogue/comforter.pdf" target="_blank">
+      <div class="card">
+        <img src="images/comforter.jpg">
+        <h3>Comforters</h3>
+      </div>
+    </a>
+
+    <a href="catalogue/wedding.pdf" target="_blank">
+      <div class="card">
+        <img src="images/wedding.jpg">
+        <h3>Wedding Sets</h3>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <h2>Explore Full Collection</h2>
+  <a href="catalogue.html" class="btn-red">Download Catalogue</a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <p style="text-align:center; color:#ccc;">
+    📍 Manmohan Nagar, Babail Road, Panipat, Haryana
+  </p>
+
+  <!-- MAP -->
+  <div class="map">
+    <iframe 
+      src="https://maps.google.com/maps?q=Panipat%20Haryana&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+  </div>
+
+  <!-- FORM -->
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button>Send Inquiry</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 FoldsNFabrics&reg;. All Rights Reserved.</p>
+  <p>📍 Manmohan Nagar, Babail Road, Panipat, Haryana</p>
+  <p style="font-size:12px;">Powered by Satkartar Handloom</p>
+  <p style="font-size:12px;">
+    Disclaimer: Product images are for representation purposes only.
+  </p>
+</footer>
+
+<!-- FLOAT -->
+<a href="https://wa.me/919034840539" class="whatsapp">Chat</a>
+
+</body>
+</html>
