@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FoldsNfabrics | Premium Curtains & Luxury Decor</title>
+<title>Product Catalogues | FoldsNfabrics</title>
 
-<!-- Google Fonts for Luxury Typography -->
+<!-- Luxury Typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* ===== BRAND DESIGN VARIABLES ===== */
 :root {
   --bg-beige: #f9f6f0;
   --navy-dark: #0b1528;
@@ -23,21 +23,15 @@
   --font-sans: 'Montserrat', sans-serif;
 }
 
-/* ===== GLOBAL ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
 body {
-  margin: 0;
   font-family: var(--font-sans);
   background: var(--bg-beige);
   color: var(--text-dark);
 }
+a { text-decoration: none; color: inherit; }
 
-/* FIX LINK COLORS */
-a { color: inherit; text-decoration: none; }
-a:visited { color: inherit; }
-
-/* ===== NAVBAR ===== */
 nav {
   display: flex;
   justify-content: space-between;
@@ -49,28 +43,18 @@ nav {
   top: 0;
   z-index: 1000;
 }
-
-.logo-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .logo {
   font-family: var(--font-serif);
   color: var(--navy-dark);
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
-
 .tagline {
   font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--text-muted);
-  margin-top: 2px;
 }
-
 nav .nav-links a {
   margin-left: 25px;
   font-size: 0.9rem;
@@ -78,264 +62,142 @@ nav .nav-links a {
   color: var(--navy-dark);
   transition: color 0.3s;
 }
+nav .nav-links a:hover, nav .nav-links a.active { color: var(--gold-accent); }
 
-nav .nav-links a:hover {
-  color: var(--gold-accent);
-}
-
-/* ===== HERO ===== */
-header {
-  height: 80vh;
-  background: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.page-header {
   text-align: center;
-  position: relative;
+  padding: 60px 20px 30px;
+  background: linear-gradient(180deg, rgba(197, 168, 128, 0.1) 0%, transparent 100%);
 }
-
-header::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(11, 21, 40, 0.65); /* Elegant navy overlay */
-  top: 0;
-  left: 0;
-}
-
-.hero { position: relative; z-index: 1; padding: 0 20px; }
-
-.hero h1 {
+.page-header h1 {
   font-family: var(--font-serif);
-  font-size: 3.8rem;
-  color: var(--white);
-  margin-bottom: 5px;
-  letter-spacing: 1px;
-}
-
-.hero-subtitle {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.8rem;
-  color: var(--gold-accent);
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 35px auto;
-  line-height: 1.8;
-  color: #e0e4ec;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-/* BUTTONS */
-.btn-gold {
-  background: var(--gold-accent);
-  padding: 14px 30px;
+  font-size: 3rem;
   color: var(--navy-dark);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.btn-gold:hover {
-  background: var(--white);
-  color: var(--navy-dark);
-}
-
-.btn-navy {
-  background: var(--navy-dark);
-  padding: 14px 30px;
-  color: var(--white);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  margin-left: 15px;
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: all 0.3s ease;
-}
-.btn-navy:hover {
-  background: transparent;
-  border-color: var(--white);
-}
-
-/* ===== PRODUCTS / COLLECTIONS ===== */
-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-h2 {
-  font-family: var(--font-serif);
-  text-align: center;
-  color: var(--navy-dark);
-  font-size: 2.5rem;
   margin-bottom: 10px;
 }
-
+.page-header p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
 .section-divider {
   width: 60px;
   height: 2px;
   background: var(--gold-accent);
-  margin: 0 auto 50px auto;
+  margin: 20px auto 0;
 }
 
-.products {
+.catalogue-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+.category-section {
+  margin-bottom: 60px;
+  scroll-margin-top: 100px;
+}
+.category-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--navy-dark);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.category-title i {
+  color: var(--gold-accent);
+  font-size: 1.5rem;
+}
+.catalogues-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
-
-.card {
+.pdf-card {
   background: var(--white);
-  border: 1px solid rgba(197, 168, 128, 0.2);
+  border: 1px solid rgba(197, 168, 128, 0.25);
   border-radius: 4px;
   overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.card:hover {
-  transform: translateY(-8px);
+.pdf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(11, 21, 40, 0.09);
   border-color: var(--gold-accent);
-  box-shadow: 0 10px 25px rgba(11, 21, 40, 0.08);
 }
-
-.card img {
+.pdf-cover {
   width: 100%;
-  height: 260px;
+  height: 320px;
   object-fit: cover;
+  background-color: #ede9e1;
 }
-
-.card h3 {
+.pdf-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.pdf-info h3 {
   font-family: var(--font-serif);
-  text-align: center;
-  color: var(--navy-dark);
-  padding: 20px 10px;
-  margin: 0;
   font-size: 1.25rem;
-  background: var(--white);
-  border-top: 1px solid rgba(197, 168, 128, 0.1);
-}
-
-/* ===== STRIP ===== */
-.strip {
-  background: var(--navy-dark);
-  color: var(--white);
-  text-align: center;
-  padding: 60px 20px;
-}
-.strip h2 {
-  color: var(--white);
-  margin-bottom: 25px;
-}
-
-/* ===== CONTACT & INQUIRY ===== */
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-top: 20px;
-}
-
-.contact-details h3 {
-  font-family: var(--font-serif);
   color: var(--navy-dark);
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-
-.info-block {
-  margin-bottom: 25px;
-  font-size: 1rem;
-  line-height: 1.6;
+.pdf-actions {
+  display: flex;
+  gap: 10px;
 }
-.info-block strong {
-  color: var(--gold-accent);
-  display: block;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  background: var(--white);
-  border: 1px solid rgba(197, 168, 128, 0.4);
-  color: var(--text-dark);
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  border-radius: 4px;
-}
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--navy-dark);
-}
-
-form button {
-  width: 100%;
-  padding: 14px;
+.btn-view {
+  flex: 1;
+  text-align: center;
   background: var(--navy-dark);
   color: var(--white);
-  border: none;
+  padding: 12px 14px;
+  font-size: 0.85rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
   border-radius: 4px;
-  transition: background 0.3s;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
-form button:hover {
+.btn-view:hover {
   background: var(--gold-accent);
   color: var(--navy-dark);
 }
-
-/* ===== MAP ===== */
-.map {
-  margin-top: 30px;
-  border: 1px solid rgba(197, 168, 128, 0.3);
+.btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 1px solid var(--gold-accent);
+  color: var(--navy-dark);
   border-radius: 4px;
-  overflow: hidden;
+  transition: 0.3s;
 }
-.map iframe {
-  width: 100%;
-  height: 320px;
-  border: 0;
-  display: block;
+.btn-download:hover {
+  background: var(--gold-accent);
+  color: var(--white);
 }
 
-/* ===== FOOTER ===== */
 footer {
   background: var(--navy-dark);
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
   font-size: 0.9rem;
   border-top: 4px solid var(--gold-accent);
 }
-
-footer p { margin: 8px 0; }
-footer .footer-brand {
+.footer-brand {
   font-family: var(--font-serif);
   color: var(--gold-accent);
   font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-
-/* ===== LUXURY WHATSAPP FLOAT ===== */
 .whatsapp {
   position: fixed;
   bottom: 30px;
@@ -345,168 +207,120 @@ footer .footer-brand {
   border-radius: 30px;
   color: white;
   font-weight: 600;
-  font-size: 0.9rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.3s;
-}
-.whatsapp:hover {
-  transform: scale(1.05);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  nav { flex-direction: column; gap: 15px; text-align: center; }
-  nav .nav-links a { margin: 0 10px; }
-  .hero h1 { font-size: 2.5rem; }
-  .hero-subtitle { font-size: 1.3rem; }
-  .btn-navy { margin-left: 0; margin-top: 10px; display: inline-block; }
-  .contact-container { grid-template-columns: 1fr; gap: 40px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <div class="logo-container">
+  <div>
     <div class="logo">FoldsNfabrics</div>
     <div class="tagline">Dress your windows, elevate your spaces</div>
   </div>
   <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="catalogue.html">Catalogue</a>
-    <a href="about.html">About</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="catalogue.html" class="active">Catalogue</a>
+    <a href="index.html#contact">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header>
-  <div class="hero">
-    <h1>PREMIUM CURTAINS</h1>
-    <div class="hero-subtitle">Style. Comfort. Perfection.</div>
-    <p>
-      Curtains & Installation Services designed to elevate your room architecture. Discover hand-selected elite fabrics tailored perfectly to your space.
-    </p>
-    <a href="catalogue.html" class="btn-gold">View Collection</a>
-    <a href="https://wa.me/918588045549" class="btn-navy">💬 Inquire via WhatsApp</a>
-  </div>
+<header class="page-header">
+  <h1>Design Catalogues</h1>
+  <p>Browse our curated collections or download high-resolution PDFs for offline viewing.</p>
+  <div class="section-divider"></div>
 </header>
 
-<!-- PRODUCTS / COLLECTIONS -->
-<section>
-  <h2>Our Design Collections</h2>
-  <div class="section-divider"></div>
-  
-  <div class="products">
-    <a href="catalogue/curtains.pdf" target="_blank">
-      <div class="card">
-        <img src="images/curtains.jpg" alt="Premium Curtains">
-        <h3>Premium Curtains</h3>
-      </div>
-    </a>
+<main class="catalogue-container" id="catalogue-root"></main>
 
-    <a href="catalogue/sofa.pdf" target="_blank">
-      <div class="card">
-        <img src="images/sofa.jpg" alt="Sofa Fabrics">
-        <h3>Luxury Sofa Fabrics</h3>
-      </div>
-    </a>
-
-    <a href="catalogue/bedsheets.pdf" target="_blank">
-      <div class="card">
-        <img src="images/bedsheet.jpg" alt="Designer Bedsheets">
-        <h3>Designer Bedsheets</h3>
-      </div>
-    </a>
-
-    <a href="catalogue/comforter.pdf" target="_blank">
-      <div class="card">
-        <img src="images/comforter.jpg" alt="Luxury Comforters">
-        <h3>Exquisite Comforters</h3>
-      </div>
-    </a>
-
-    <a href="catalogue/wedding.pdf" target="_blank">
-      <div class="card">
-        <img src="images/wedding.jpg" alt="Premium Wedding Sets">
-        <h3>Premium Wedding Sets</h3>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- STRIP -->
-<div class="strip">
-  <h2>Experience Flawless Custom Tailoring</h2>
-  <a href="catalogue.html" class="btn-gold">Download Design Catalogue</a>
-</div>
-
-<!-- CONTACT & DETAILS SECTION -->
-<section id="contact">
-  <h2>Connect With Us</h2>
-  <div class="section-divider"></div>
-
-  <div class="contact-container">
-    <!-- LEFT SIDE: INFO & MAP -->
-    <div class="contact-details">
-      <h3>Our Showroom</h3>
-      
-      <div class="info-block">
-        <strong>Address Location</strong>
-        A5–17, MRG Ultimus, Gurgaon, Sector 90, 122004
-      </div>
-
-      <div class="info-block">
-        <strong>Direct Booking Hotline</strong>
-        +91 8588045549
-      </div>
-
-      <div class="info-block">
-        <strong>Installation Guarantee</strong>
-        Expert Custom Fitting & Seamless Installation Assured.
-      </div>
-
-      <!-- MAP TARGETING MRG ULTIMUS SEC 90 GURGAON -->
-      <div class="map">
-        <iframe 
-          src="https://maps.google.com/maps?q=MRG%20Ultimus%20Sector%2090%20Gurgaon&t=&z=15&ie=UTF8&iwloc=&output=embed">
-        </iframe>
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE: LUXURY INQUIRY FORM -->
-    <div>
-      <h3 style="font-family: var(--font-serif); color: var(--navy-dark); font-size: 1.8rem; margin-bottom: 15px;">Book Consultation</h3>
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email Address" required>
-        <textarea placeholder="Tell us about your window size, fabric choice, or setup project details..." rows="6"></textarea>
-        <button type="submit">Request On-Site Measurement</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">FoldsNfabrics</div>
   <p>© 2026 FoldsNfabrics. All Rights Reserved.</p>
-  <p>📍 A5–17, MRG Ultimus, Gurgaon, Sector 90, 122004</p>
-  <p style="font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 20px;">
-    Disclaimer: Colors and drapes shown are strictly for luxury preview representation.
-  </p>
+  <p>A5–17, MRG Ultimus, Gurgaon, Sector 90, 122004</p>
 </footer>
 
-<!-- WHATSAPP FLOAT BADGE -->
 <a href="https://wa.me/918588045549" class="whatsapp" target="_blank">
-  <span>💬 Chat With Designer</span>
+  <i class="fa-brands fa-whatsapp"></i> Chat With Designer
 </a>
+
+<script>
+// EXACT JSON DATA EMBEDDED
+const catalogueData = [
+  {
+    "category": "Bedsheets",
+    "image": "catalogue/bedsheets/M2K Mulberry Part1.JPG",
+    "catalogues": [
+      {
+        "title": "M2K Mulberry Part 1",
+        "cover": "catalogue/bedsheets/M2K Mulberry Part1.JPG",
+        "pdf": "catalogue/bedsheets/M2K Mulberry Part1.pdf"
+      },
+      {
+        "title": "M2K Mulberry Part 2",
+        "cover": "catalogue/bedsheets/M2K Mulberry Part2.JPG",
+        "pdf": "catalogue/bedsheets/M2K Mulberry Part2.pdf"
+      }
+    ]
+  },
+  {
+    "category": "Curtains",
+    "image": "catalogue/curtains/Designer Curtains.jpg",
+    "catalogues": [
+      {
+        "title": "Designer Curtains",
+        "cover": "catalogue/curtains/Designer Curtains.jpg",
+        "pdf": "catalogue/curtains/Designer Curtains.pdf"
+      }
+    ]
+  }
+];
+
+function renderCatalogues() {
+  const root = document.getElementById('catalogue-root');
+  root.innerHTML = '';
+
+  catalogueData.forEach(section => {
+    const sectionEl = document.createElement('section');
+    sectionEl.className = 'category-section';
+    sectionEl.id = section.category.toLowerCase().trim();
+
+    const cardsHtml = section.catalogues.map(item => `
+      <div class="pdf-card">
+        <img class="pdf-cover" 
+             src="${encodeURI(item.cover)}" 
+             alt="${item.title}" 
+             onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80'">
+        <div class="pdf-info">
+          <h3>${item.title}</h3>
+          <div class="pdf-actions">
+            <a href="${encodeURI(item.pdf)}" target="_blank" class="btn-view">
+              <i class="fa-regular fa-file-pdf"></i> View PDF
+            </a>
+            <a href="${encodeURI(item.pdf)}" download class="btn-download" title="Download PDF">
+              <i class="fa-solid fa-arrow-down-to-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    sectionEl.innerHTML = `
+      <h2 class="category-title">
+        <i class="fa-solid fa-layer-group"></i> ${section.category}
+      </h2>
+      <div class="catalogues-grid">
+        ${cardsHtml}
+      </div>
+    `;
+
+    root.appendChild(sectionEl);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderCatalogues);
+</script>
 
 </body>
 </html>
